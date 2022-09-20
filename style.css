@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* considera os 580px */
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+body {
+    background-image: url(assets/Fundo.jpg.jpg); /* Onde imagem está*/
+    background-position: top center; /* posicionamento do funo */
+    background-size: 100% auto; /* primeiro largura e depois altura */
+    background-repeat: no-repeat; /* não repetir background */
+    background-color: #121214; /* cor de fundo restante */
+}
+
+header {
+   padding: 2rem 0;
+
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+
+    display: flex;
+    border-radius: 50%;
+
+    padding: 5px;
+
+    transition: transform .3s;
+}
+
+
+
+header div img {
+
+    width: 100%;
+    border-radius: 50%;
+    
+
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+
+
+main {
+    max-width: 580px; /* tudo dentro do main vai ficar nesaa largura */
+    width: 90%; /* não deixa ocupar tudo */
+    margin: auto; /* calculo automatico para as margens */
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+}
+
+
+
+section div {
+    background-color: #2a2634; 
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+section ul {
+    display: flex; /* vizualização das caicas */
+    flex-wrap: wrap; /* joga itens para baixo caso tenha mais de 4 */
+    /*gap: 16px; /* espaço entre os itens da lista */
+    justify-content: space-between;
+
+    margin-top: 24px; /* Margin do topo entre os arquivos */
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px; /* arredondamento da borda */
+}
+
+.chanel-list img {
+    width: 70px;
+    border-radius: 50%;
+    border: 3px solid #443e54;
+}
+
+
+header div {
+    animation: fromTop .3s 2s backwards;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+        
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .8s;
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+}
